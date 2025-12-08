@@ -1,0 +1,57 @@
+name: geos505          # optional when you’ll use -p ./env
+channels:
+  - conda-forge
+  - nodefaults         # guarantees only conda-forge packages
+
+# ── Core runtime ────────────────────────────────────────────────────
+dependencies:
+  - python=3.11
+  - jupyterlab
+  - ipykernel
+  - numpy
+  - pandas
+  - statsmodels
+  - scikit-learn
+  - xgboost
+  - xarray
+  - dask
+  - distributed
+  - metpy
+  - scipy
+  - matplotlib         # keep until you swap in hvplot, etc.
+  - seaborn
+  - plotly
+  - holoviews
+  - hvplot
+  - bokeh
+  - pyfonts
+  - pint
+  - zarr
+
+
+# ── Geospatial “minimum viable” (read rasters, shapefiles) ─────────
+  - rasterio
+  - rioxarray
+  - geopandas
+  - pyproj
+  - s3fs                # read public S3 buckets with fsspec
+  - cartopy
+  - pygeohydro
+  - shapely
+  - richdem
+  - laspy
+  
+# —— Geospatial - Google Earth Engine
+  - earthengine-api
+  - geemap
+  - lonboard
+  # - pdal
+  # - python-pdal
+
+# -- Hydrology specific
+  - dataretrieval
+  #- pip
+  - pip:
+     - metloom
+    #- pyforestscan
+    #- open3d
